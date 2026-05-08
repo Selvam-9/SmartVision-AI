@@ -16,6 +16,9 @@ env/
 logs/
 smartvision_data/
 models/*.keras
+!models/classifier_mobilenetv2.keras
+!models/classifier_resnet50.keras
+!models/classifier_efficientnetb0.keras
 !models/detector_yolov8_best.pt
 !models/classes.json
 
