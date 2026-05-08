@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# Project specific
+logs/
+smartvision_data/
+models/*.keras
+models/*.pt
+models/*.h5
+!models/classes.json
+
+# Notebook checkpoints
+.ipynb_checkpoints/

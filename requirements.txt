@@ -1,0 +1,50 @@
+# SmartVision AI - Requirements
+# ========================================
+# Core dependencies for SmartVision AI pipeline
+
+# TensorFlow (GPU version recommended)
+tensorflow>=2.15.0
+# tensorflow-gpu>=2.15.0  # Uncomment for GPU support
+
+# Data processing
+numpy>=1.24.0,<2.0.0
+pandas>=2.0.0
+Pillow>=10.0.0
+
+# Streamlit UI
+streamlit>=1.30.0
+streamlit-webrtc>=8.0.0
+av>=10.0.0
+
+# YAML configuration
+PyYAML>=6.0
+
+# Logging
+python-dotenv>=1.0.0
+
+# Jupyter (for notebooks)
+jupyter>=1.0.0
+ipykernel>=6.0.0
+
+# Development tools
+black>=23.0.0
+flake8>=6.0.0
+isort>=5.12.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Optional: Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Optional: Model optimization
+tensorboard>=2.15.0
+
+# Optional: Object detection (YOLO)
+ultralytics>=8.0.0  # Used for YOLO detection
+
+# Optional: Experiment tracking
+# mlflow>=2.0.0  # Uncomment for MLflow integration
+# wandb>=0.15.0  # Uncomment for Weights & Biases
