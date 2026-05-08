@@ -16,8 +16,7 @@ env/
 logs/
 smartvision_data/
 models/*.keras
-models/*.pt
-models/*.h5
+!models/detector_yolov8_best.pt
 !models/classes.json
 
 # Notebook checkpoints
