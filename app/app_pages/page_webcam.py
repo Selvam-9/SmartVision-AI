@@ -93,7 +93,15 @@ def show():
         ctx = webrtc_streamer(
             key="yolo-live",
             video_processor_factory=YOLOVideoProcessor,
-            rtc_configuration=RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}),
+            rtc_configuration=RTCConfiguration({
+                "iceServers": [
+                    {"urls": ["stun:stun.l.google.com:19302"]},
+                    {"urls": ["stun:stun1.l.google.com:19302"]},
+                    {"urls": ["stun:stun2.l.google.com:19302"]},
+                    {"urls": ["stun:stun3.l.google.com:19302"]},
+                    {"urls": ["stun:stun4.l.google.com:19302"]},
+                ]
+            }),
             media_stream_constraints={"video": True, "audio": False},
         )
 
