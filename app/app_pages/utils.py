@@ -35,13 +35,21 @@ def load_classes():
     return [f"class_{i}" for i in range(26)]
 
 @st.cache_resource
-def load_single_model(model_path: str):
+def load_single_model(model_path):
     """Load a keras model (cached)."""
     from tensorflow.keras.models import load_model
+    path = Path(model_path)
+    
+    if not path.exists():
+        st.warning(f"⚠️ Model file `{path.name}` not found in the repository.")
+        if "vgg16" in path.name.lower():
+            st.info("💡 **Note:** The VGG16 model (~136MB) exceeds GitHub's 100MB file limit and was not uploaded. Please use MobileNetV2, ResNet50, or EfficientNetB0 instead.")
+        return None
+        
     try:
-        return load_model(model_path)
+        return load_model(str(path))
     except Exception as e:
-        st.error(f"Could not load model {Path(model_path).name}: {e}")
+        st.error(f"❌ Error loading `{path.name}`: {e}")
         return None
 
 def get_preprocess_fn(model_name: str):
