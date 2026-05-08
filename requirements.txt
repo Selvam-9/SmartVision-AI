@@ -3,7 +3,7 @@
 # Core dependencies for SmartVision AI pipeline
 
 # TensorFlow (GPU version recommended)
-tensorflow>=2.15.0
+tensorflow-cpu>=2.15.0
 # tensorflow-gpu>=2.15.0  # Uncomment for GPU support
 
 # Data processing
